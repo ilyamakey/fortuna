@@ -2,8 +2,12 @@
 
 require 'bootstrap.php';
 
-echo "HEllo world!";
+$query = new DBQuery($pdo);
 
-var_dump($app['database']['name']);
+$info = $query->fetchAll('machines');
 
-?>
+// var_dump($info);
+
+foreach ($info as $key) {
+  echo $key['model'];
+}
