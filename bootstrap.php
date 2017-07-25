@@ -2,7 +2,7 @@
 
 $config = require 'config.php';
 
-require 'DBConnection.php';
-require 'DBQuery.php';
+require 'core/DBConnection.php';
+require 'core/DBQuery.php';
 
 $pdo = Connection::make($config['database']);

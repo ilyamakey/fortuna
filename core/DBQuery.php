@@ -15,7 +15,8 @@ class DBQuery
 
     $data = $this->pdo->prepare('select * from ' . $table);
     $data->execute();
-    return $data->fetchAll();
+
+    return $data->fetchAll(PDO::FETCH_OBJ);
 
   }
 
