@@ -11,3 +11,7 @@ Requires PHP > 5.6
 **run migrations**
 
 > php vendor/bin/phinx migrate
+
+**seed database**
+
+> php vendor/bin/phinx seed:run
