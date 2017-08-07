@@ -4,6 +4,10 @@ Requires PHP > 5.6
 *Installation*
 ----------
 
+**run composer install**
+
+> composer install
+
 **copy env file**
 
 > cp .env.example .env
