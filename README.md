@@ -4,10 +4,10 @@ Requires PHP > 5.6
 *Installation*
 ----------
 
-*copy env file*
+**copy env file**
 
-cp .env.example .env
+> cp .env.example .env
 
-run migrations
+**run migrations**
 
-php vendor/bin/phinx migrate
+> php vendor/bin/phinx migrate
