@@ -3,23 +3,22 @@
 class DBQuery
 {
 
-  public function __construct(PDO $pdo)
-  {
+    public function __construct(PDO $pdo)
+    {
 
-    $this->pdo = $pdo;
+        $this->pdo = $pdo;
 
-  }
+    }
 
-  public function fetchAll($table)
-  {
+    public function fetchAll($table)
+    {
 
-    $data = $this->pdo->prepare('select * from ' . $table);
-    $data->execute();
+        $data = $this->pdo->prepare('select * from ' . $table);
+        $data->execute();
 
-    return $data->fetchAll(PDO::FETCH_OBJ);
+        return $data->fetchAll(PDO::FETCH_OBJ);
 
-  }
-
+    }
 
 
 }
