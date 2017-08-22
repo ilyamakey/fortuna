@@ -3,17 +3,20 @@
 class Connection
 {
 
-  public static function make($config)
-  {
+    public static function make()
+    {
+        try {
 
-    try {
+            $pdo = new PDO (
+                'mysql:host=' . getenv('DB_HOST') . ';dbname=' . getenv('DB_NAME'),
+                getenv('DB_USER'),
+                getenv('DB_PASSWORD'),
+                [
 
-          $pdo = new PDO (
-            $config['host'] . ';dbname=' . $config['name'],
-            $config['user'],
-            $config['password'],
-            $config['options']
-          );
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+
+                ]
+            );
 
         } catch (PDOException $e) {
 
@@ -23,7 +26,7 @@ class Connection
 
         return $pdo;
 
-  }
+    }
 
 
 }

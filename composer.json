@@ -1,0 +1,7 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^2.4",
+        "robmorgan/phinx": "^0.8.1",
+        "fzaninotto/faker": "^1.6"
+    }
+}
