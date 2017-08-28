@@ -1,8 +1,10 @@
 <?php
 
-$config = require 'config.php';
+require_once 'vendor/autoload.php';
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
 
-require 'core/DBConnection.php';
-require 'core/DBQuery.php';
+require_once './core/DBConnection.php';
+require_once './core/DBQuery.php';
 
-$pdo = Connection::make($config['database']);
+$pdo = Connection::make(getenv('DB_HOST'));
