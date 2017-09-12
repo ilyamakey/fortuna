@@ -24,6 +24,9 @@ class DBQuery
     {
       if(!$parameter) header("Location: /");
 
+      $checkbox = "";
+      $radio = "";
+
       foreach ($parameter as $key => $value) {
 
         if ($value === "checked") {
@@ -32,14 +35,13 @@ class DBQuery
 
         } else {
 
-          $radio = $radio . "$key = '$value'" . " AND ";
+          $radio = "$key = '$value'";
 
         }
 
       };
 
       $checkbox = rtrim($checkbox, "AND ");
-      $radio = rtrim($radio, "AND ");
 
       if(!$checkbox) {
 
@@ -47,9 +49,9 @@ class DBQuery
 
       } else if (!$radio){
 
-        $statement = $checkbox;
+        $statement = rtrim($checkbox, "AND ");
 
-      } else $statement = $checkbox . " AND " . $radio;
+      } else $statement = rtrim($checkbox, "AND ") . " AND " . $radio;
 
       $data = $this->pdo->prepare("SELECT * FROM $table WHERE $statement");
 
