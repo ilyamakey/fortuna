@@ -4,18 +4,7 @@ use Phinx\Migration\AbstractMigration;
 
 class CreateMachinesTable extends AbstractMigration
 {
-    /**
-     *
-     *    createTable
-     *    renameTable
-     *    addColumn
-     *    renameColumn
-     *    addIndex
-     *    addForeignKey
-     *
-     * Remember to call "create()" or "update()" and NOT "save()" when working
-     * with the Table class.
-     */
+
     public function change()
     {
         $table = $this->table('machines');
