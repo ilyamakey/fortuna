@@ -6,7 +6,6 @@ class Connection
     public static function make()
     {
         try {
-
             $pdo = new PDO (
                 'mysql:host=' . getenv('DB_HOST') . ';dbname=' . getenv('DB_NAME'),
                 getenv('DB_USER'),
@@ -20,13 +19,10 @@ class Connection
 
         } catch (PDOException $e) {
 
-            die($e->getMEssage());
+            die($e->getMessage());
 
         };
 
         return $pdo;
-
     }
-
-
 }
