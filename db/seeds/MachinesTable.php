@@ -22,9 +22,9 @@ class MachinesTable extends AbstractSeed
                 'spring_od_min'    => $faker->randomDigitNotNull,
                 'spring_od_max'    => $faker->randomDigitNotNull,
                 'productivity'     => $faker->randomDigitNotNull,
-                'trimming_machine' => $faker->randomLetter.'-'.$faker->randomNumber(),
-                'looping_machine'  => $faker->randomLetter.'-'.$faker->randomNumber(),
-                'power_reel'       => $faker->words(rand(2, 5), true),
+                'trimming_machine' => $faker->optional()->randomLetter,
+                'looping_machine'  => $faker->optional()->word,
+                'power_reel'       => $faker->optional()->words(rand(2, 5), true),
                 'mode'             => $faker->word,
                 'description'      => $faker->sentences((rand(1, 3)),true)
             ];
