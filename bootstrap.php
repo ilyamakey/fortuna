@@ -6,5 +6,6 @@ $dotenv->load();
 
 require_once './core/DBConnection.php';
 require_once './core/DBQuery.php';
+require './core/Router.php';
 
 $pdo = Connection::make(getenv('DB_HOST'));

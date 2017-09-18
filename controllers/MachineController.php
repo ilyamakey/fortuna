@@ -13,13 +13,13 @@ Class MachineController
 
     public function index()
     {
+      echo "Called Index method from MachineController";
     }
 
     public function machines()
     {
         $info = $this->query->fetchAll('machines', 2);
-        var_dump($info);
-        echo PHP_EOL.'<br/><br/>';
-        return 'done downloading machines';
+        require './views/index.view.php';
+
     }
 }
