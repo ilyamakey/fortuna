@@ -4,9 +4,6 @@ define('BASE_DIR', __DIR__);
 define('VIEWS_DIR', BASE_DIR . '/views');
 
 require 'bootstrap.php';
-require BASE_DIR . '/controllers/MachineController.php';
-require BASE_DIR . '/controllers/HomePageController.php';
-require BASE_DIR . '/controllers/AboutController.php';
 
 $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 
