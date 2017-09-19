@@ -25,11 +25,15 @@ class Router
 
       } else if ($uri === '/') {
 
-        return $defaultView;
+        $view = require $defaultView;
+
+        return $view;
 
       }
 
-    }
+    };
+
+    echo "No route spicified for your request {$uri}";
 
   }
 

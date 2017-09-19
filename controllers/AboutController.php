@@ -8,7 +8,7 @@ Class AboutController
     public function index()
     {
 
-      return './views/about.view.php';
+      return require './views/about.view.php';
 
     }
 
