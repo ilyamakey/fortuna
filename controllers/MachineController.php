@@ -13,7 +13,6 @@ Class MachineController
 
     public function index()
     {
-      echo "Called Index method from MachineController";
     }
 
     public function machines()

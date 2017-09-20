@@ -8,7 +8,9 @@ Class AboutController
     public function index()
     {
 
-      return require './views/about.view.php';
+      $message = 'this is About page';
+
+      require './views/about.view.php';
 
     }
 
