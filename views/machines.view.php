@@ -21,7 +21,12 @@
   </head>
   <body>
 
-    <?php foreach ($info as $key) : ?>
+    <p>
+      <a href="/">Home page</a>
+      <a href="/about">About page</a>
+    </p>
+
+    <?php foreach ($this->data as $key) : ?>
 
       <div class="round">
 
@@ -39,6 +44,7 @@
       </div>
 
      <?php endforeach; ?>
+
 
   </body>
 </html>
