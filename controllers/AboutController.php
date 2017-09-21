@@ -1,6 +1,7 @@
 <?php
 
 namespace Controllers;
+use View;
 
 Class AboutController
 {
@@ -8,9 +9,9 @@ Class AboutController
     public function index()
     {
 
-      $message = 'this is About page';
+      $view = new View('/about');
 
-      require './views/about.view.php';
+      return $view->renderView();
 
     }
 

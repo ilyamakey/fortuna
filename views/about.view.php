@@ -8,7 +8,7 @@
 
     <h1>ABOUT PAGE</h1>
 
-    <p><?php echo $message ?></p>
+    <p><a href="/">Home page</a></p>
 
   </body>
 </html>

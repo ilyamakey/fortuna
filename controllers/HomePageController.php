@@ -1,6 +1,7 @@
 <?php
 
 namespace Controllers;
+use View;
 
 Class HomePageController
 {
@@ -8,7 +9,9 @@ Class HomePageController
     public function index()
     {
 
-      return './views/home.view.php';
+      $view = new View('/home');
+
+      return $view->renderView();
 
     }
 
